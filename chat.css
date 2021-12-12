@@ -1,0 +1,219 @@
+.headers{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contents{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cont{
+    margin-left: 30px;
+    margin-right: 20px;
+    font-family: 'Shippori Antique B1', sans-serif;
+    font-size: 16px;
+}
+
+
+.contpic{
+    height: 80px;
+    width: auto;
+}
+
+.result{
+    border: solid 1px black;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.result th{
+    font-size: 30px;
+    border: solid 1px black;
+    border-collapse: collapse;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.result td{
+    border: solid 1px black;
+    border-collapse: collapse;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.titlefont{
+    font-family: 'Shippori Antique B1', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color: darkslategray;
+    border-radius:solid 1px darkslategray;
+    padding-left: 40px;
+
+}
+
+.chatareaS{
+    height:400px; 
+    width: 300px;
+    overflow:auto;
+    background-color: rgba(152,193,69,0.8);
+    padding: 10px;
+}
+
+.bgS{
+    background-image: url(./imgs/Yakultlogo.png);
+    background-position: right bottom;
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+.chatareaB{
+    height:400px; 
+    width: 300px;
+    overflow:auto;
+    background-color: rgba(176,143,50,0.8);
+    padding: 10px;
+}
+
+.bgB{
+    background-image: url(./imgs/Orixlogo.png);
+    background-position: right bottom;
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+.mainpic{
+    height: 400px;
+    width:auto;
+    margin: 0px;
+}
+
+.logo{
+    width:300px;
+    height:100px;
+}
+
+/* https://ayaito.net/webtips/color_code/4286/ */
+.mother3{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start; 
+    background-color: white;  
+}
+
+.mother1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-end; 
+    background-color: white;  
+}
+
+.mother2{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start; 
+    background-color: white;  
+}
+
+.center{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.message:hover{
+    color: brown;
+}
+
+/* .youtubevideo{
+    /* margin-top: 110px; */
+/* } */
+
+.format{
+    border-top: 1px solid #94bcb7  ;
+    padding: 8px;
+}
+.formata{
+    border-top: 1px solid #94bcb7  ;
+    border-bottom: 1px solid #94bcb7  ;
+    padding: 8px;
+}
+
+.formatb{
+    border-top: 1px solid #94bcb7  ;
+    /* border-left: 1px solid #94bcb7  ; */
+    padding: 8px;
+}
+
+.headfont{
+    font-size: 28px;
+    color: darkslategray;
+    font-weight: bolder;
+    font-family: 'Shippori Antique B1', sans-serif;
+}
+
+.boardlogo{
+    width:70px;
+    height: auto;
+}
+
+.boardgrid{
+    border: solid 1px black;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    background-color: rgba(205, 241, 151, 0.651);
+}
+
+.boardgrid th{
+    font-size: 15px;
+    border: solid 1px black;
+    border-collapse: collapse;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.boardgrid td{
+    font-size: 20px;
+    border: solid 1px black;
+    border-collapse: collapse;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.footerarea{
+    background-color: grey;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.msgname{
+    font-family: 'Yusei Magic', sans-serif;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: #30392c;
+    /* font-weight: bolder; */
+}
+
+.msgdocu{
+    font-family: 'Yusei Magic', sans-serif;
+    padding-left: 15px;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-weight: lighter;
+    /* font-weight: bolder; */
+}

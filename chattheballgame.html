@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<!-- <script src="../js/jquery-2.1.3.min.js"></script> -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Shippori+Antique+B1&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+        </style>
+<link rel="stylesheet" href="./chat.css">
+<title>Chat about the ball game!!</title>
+</head>
+<body>
+
+<header>
+    <div class=headers>
+        <div><img class=contpic src="./imgs/NIPPONSERIES.jpeg" alt=""></div>
+        <div class=titlefont>2021日本シリーズ観戦サイト Chat about the ball game!!</div>
+    </div>
+</header>
+
+
+<!-- チームロゴ・戦況 -->
+<div class=mother1>
+<!-- Swallows画面 -->
+    <div class=center> 
+        <div> <img src="./imgs/Swallows.jpeg" alt="" class=logo> </div>
+    </div>
+        <div class=center>
+            <div class="headfont">第５戦 @東京ドーム</div>
+            <div>
+                <table class=boardgrid>
+                    <tr>
+                        <th></th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>R</th>
+                        <th>H</th>
+                        <th>E</th>
+                    </tr>
+                    <tr>
+                        <td> <img class=boardlogo src="./imgs/Buffaloes.png" alt=""> </td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>2</td>
+                        <td>7</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td> <img class=boardlogo src="./imgs/Swallows.jpeg" alt=""> </td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class=center>
+            <div> <img src="./imgs/Buffaloes.png" alt="" class=logo> </div>
+        </div>
+</div>
+
+<!-- 映像・応援メッセージ出力画面 -->
+    <div class=mother2>
+        <div class=center>
+            <div class=bgS><div id="outputS" class=chatareaS ></div></div>
+        </div>
+        <div class=center>
+            <iframe width="550" height="420" src="https://www.youtube.com/embed/D1dZFNZKihQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class=center>
+            <div class="bgB"><div id="outputB" class=chatareaB ></div></div>
+        </div>
+    </div>
+
+<!-- 応援歌・応援メッセージ入力画面 -->
+    <div class=mother3>
+        <div class="center">
+            <div>
+            <select name="" id="Yakultmusic">
+                <option value="Y1">チャンステーマ4</option>
+                <option value="Y2">チャンステーマ1(夏祭り)</option>
+                <option value="Y3">1山田</option>
+                <option value="Y4">23青木</option>
+                <option value="Y5">55村上</option>
+            </select>
+            <button id="playY" type="button"><span>再生</span></button>
+            <button id="stopY" type="button"><span>停止</span></button>
+            <audio src="./audio/YakultChance1.m4a" id="Y1" loop></audio>
+            <audio src="./audio/YakultChance2.m4a" id="Y2" loop></audio>
+            <audio src="./audio/YakultYamada.m4a" id="Y3" loop></audio>
+            <audio src="./audio/YakultAoki.m4a" id="Y4" loop></audio>
+            <audio src="./audio/YakultMurakami.m4a" id="Y5" loop></audio>
+            </div>
+        </div>
+
+        <div class=center>
+            <table>
+                <tr>
+                    <td class=format>応援チーム：</td>
+                    <td class=format><select name="" id="team" >
+                        <option value="">(選択してください)</option>
+                        <option value="1">東京ヤクルトスワローズ</option>
+                        <option value="2">オリックスバファローズ</option></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=format>名前：</td>
+                    <td class=format><input type="text" id="uname"></td>
+                </tr>
+                <tr>
+                    <td class=formata>応援コメント：</td>
+                    <td class=formata> <textarea name="" id="text" cols="30" rows="3"></textarea></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="center">
+            <div>
+            <select name="" id="Orixmusic">
+                <option value="O1">チャンステーマ丑王</option>
+                <option value="O2">3安達</option>
+                <option value="O3">6宗</option>
+                <option value="O4">34吉田正尚</option>
+                <option value="O5">55T-岡田</option>
+            </select>
+            <button id="playO" type="button"><span>再生</span></button>
+            <button id="stopO" type="button"><span>停止</span></button>
+            <audio src="./audio/OrixChance1.m4a" id="O1" loop></audio>
+            <audio src="./audio/OrixAdachi.m4a" id="O2" loop></audio>
+            <audio src="./audio/OrixMune.m4a" id="O3" loop></audio>
+            <audio src="./audio/OrixYoshida.m4a" id="O4" loop></audio>
+            <audio src="./audio/OrixTOkada.m4a" id="O5" loop></audio>
+            </div>
+        </div>
+
+    </div>
+        
+<!-- 戦績一覧 -->
+<div class=mother1>
+<div class=center>
+            <table class="result">
+                <tr>
+                    <th class="result">３勝</th>
+                    <th>VS</th>
+                    <th>1勝</th>
+                </tr>
+                <tr>
+                    <td>3(●：マクガフ)</td>
+                    <td>-第1戦-</td>
+                    <td>4(○：比嘉)</td>
+                </tr>
+                <tr>
+                    <td>2(○：高橋)</td>
+                    <td>-第2戦-</td>
+                    <td>0(●：宮城)</td>
+                </tr>
+                <tr>
+                    <td>5(○：石山)</td>
+                    <td>-第3戦-</td>
+                    <td>4(●：吉田凌)</td>
+                </tr>
+                <tr>
+                    <td>2(○：石川)</td>
+                    <td>-第4戦-</td>
+                    <td>1(●：増井)</td>
+                </tr>
+                <tr>
+                    <td>先発：原</td>
+                    <td>-第5戦-</td>
+                    <td>先発：山﨑福</td>
+                </tr>
+            </table>
+        </div>
+    </div>   
+
+<!-- fotter -->
+<footer class=footerarea>
+    <div>
+        本サイトは講習用に作成したものであり、私的利用を目的としています。
+    </div>
+</footer>
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- JQuery -->
+
+
+<!--** 以下Firebase **-->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"; //分割代入している initializeAppを取り出している
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries //RealTimeBaseの読み込みを行う
+
+    import { getDatabase, ref, push, set, onChildAdded, remove, onChildRemoved }
+        from "https://cdnjs.cloudflare.com/ajax/libs/firebase/9.6.0/firebase-database.min.js";
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      apiKey:  //gitHUBにアップロードする際は削除！！！！！！！！
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      authDomain: "gsapp-6e2a2.firebaseapp.com",
+      projectId: "gsapp-6e2a2",
+      storageBucket: "gsapp-6e2a2.appspot.com",
+      messagingSenderId: "703327470338",
+      appId: "1:703327470338:web:b3be3394019c818516781b"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app); //firebase内のappの利用を申請 
+    const dbRef =ref(db,"chat");//dbのうちChatの部分を使用する申請
+ 
+    // -----入力-----
+    $('#text').keypress(function(e) {
+        if(e.which==13){
+        const uname=$("#uname").val();//valを使用するとidの内容を取得可能
+        const text = $("#text").val();
+        var team= document.getElementById("team").value;
+        // counta +=1
+        const msg={
+            uname: uname,
+            text: text,
+            team: team,
+        };
+            
+        const newPostRef =push(dbRef); 
+        set(newPostRef,msg);}
+
+            $("#uname").val("");
+            $("#text").val("");
+            $("#team").val("");
+    });
+
+    // -----出力-----
+    onChildAdded(dbRef,function(data){
+        const msg= data.val();
+        // console.log(msg);
+        const key=data.key;
+        // console.log(key);
+        if(msg.team==1){
+        let h="<div><p class=msgname id='msg-";
+            h+=key;
+            h+="'>"
+            h+= msg.uname;
+            h+= "：</p><p class=msgdocu>";
+            h+=msg.text;
+            h+="</p>";
+        $("#outputS").append(h);
+    }
+    if(msg.team==2){
+        let b="<div><p class=msgname id='msg-";
+            b+=key;
+            b+="'>"
+            b+= msg.uname;
+            b+= "：</p><p class=msgdocu>";
+            b+=msg.text;
+            b+="</p>";
+        $("#outputB").append(b);
+    }
+
+    $('#outputS').animate({scrollTop: $('#outputS')[0].scrollHeight}, 'fast');
+    $('#outputB').animate({scrollTop: $('#outputB')[0].scrollHeight}, 'fast');
+    // -----削除-----
+    $('#msg-'+key).on('dblclick', function () {
+        console.log(key);
+                remove(ref(db, "chat/" + key));
+                $('#msg-' + key).remove();
+                $('#remove-' + key).remove();        
+                alert('削除します')
+            });
+    })
+
+     // -----応援歌再生-----
+    $('#playY').on('click',function(){
+        var YMV= document.getElementById("Yakultmusic").value;
+        var YM=String(YMV);
+        console.log(YM);
+        $('#'+YM).get(0).play();
+        $('#stopY').on('click',function(){
+            console.log("STOP");
+            $('#'+YM).get(0).pause();
+            $('#'+YM).get(0).currentTime = 0;
+        });
+    });
+
+    $('#playO').on('click',function(){
+        var OMV= document.getElementById("Orixmusic").value;
+        var OM=String(OMV);
+        console.log(OM);
+        $('#'+OM).get(0).play();
+        $('#stopO').on('click',function(){
+            console.log("STOP");
+            $('#'+OM).get(0).pause();
+            $('#'+OM).get(0).currentTime = 0;
+        });
+    });
+
+  </script>
+
+
+</body>
+</html>
+
