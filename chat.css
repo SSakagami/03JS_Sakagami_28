@@ -128,8 +128,8 @@
 }
 
 .message{
-    display: flex;
-    justify-content: left;
+    /* display: flex;
+    justify-content: left; */
     flex-wrap: nowrap;
     align-items: center;
 }

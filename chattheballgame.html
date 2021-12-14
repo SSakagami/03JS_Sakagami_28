@@ -225,7 +225,7 @@
     // Your web app's Firebase configuration
     const firebaseConfig = {
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      apiKey:  //gitHUBにアップロードする際は削除！！！！！！！！
+      apiKey: , //gitHUBにアップロードする際は削除！！！！！！！！
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       authDomain: "gsapp-6e2a2.firebaseapp.com",
       projectId: "gsapp-6e2a2",
@@ -267,23 +267,23 @@
         const key=data.key;
         // console.log(key);
         if(msg.team==1){
-        let h="<div><p class=msgname id='msg-";
+        let h="<div class=message id='msg-";
             h+=key;
-            h+="'>"
+            h+="'><p class=msgname>"
             h+= msg.uname;
             h+= "：</p><p class=msgdocu>";
             h+=msg.text;
-            h+="</p>";
+            h+="</p></div>";
         $("#outputS").append(h);
     }
     if(msg.team==2){
-        let b="<div><p class=msgname id='msg-";
+        let b="<div class=message id='msg-";
             b+=key;
-            b+="'>"
+            b+="'><p class=msgname>"
             b+= msg.uname;
             b+= "：</p><p class=msgdocu>";
             b+=msg.text;
-            b+="</p>";
+            b+="</p></div>";
         $("#outputB").append(b);
     }
 
